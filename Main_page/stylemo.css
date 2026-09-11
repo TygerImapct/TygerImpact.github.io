@@ -7,15 +7,18 @@
 body {
   background: linear-gradient(to bottom right ,black,#a0201c) fixed no-repeat;
   color: white;
-  font-family: "Prompt", sans-serif;
+  /* font-family: "Prompt", sans-serif; */
   overflow-x: hidden;
   font-family: kanit ;
   /* font-weight: 350; */
 }
+.clogo{
+  display: flex ;
+  justify-content: center;
+}
 .logo-bg{
   position: absolute;
-  top: 25%;
-  left: 25%;
+  top: 35%;
   z-index: -1;
   animation: Fade2 0.7s ease;
 }
@@ -105,16 +108,23 @@ nav ul li a:hover {
   transition: 0.3s;
   z-index: 0;
 }
-
 .btn.primary {
   background: red;
   color: #fff;
+}
+.non-member{
+  font-size: 16px;
+  font-family: kanit;
+  cursor: pointer;
+}
+.btn.non-member:active:after{
+  background: #f1bdbd;
 }
 .btn:hover::before {
   opacity: 1;
 }
 .btn:hover {
-  background: red;
+  background: #ff0000;
   color: #000;
 }
 .btn::after{
@@ -166,16 +176,20 @@ nav ul li a:hover {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  border: 3px solid red;
-  box-shadow: 0 0 20px red;
-  animation: float 3s ease-in-out infinite;
+  border: 3px solid #fff;
+  box-shadow: 0 0 20px #fff;
   cursor: pointer;
-  transition: box-shadow 0.4s,border-radius 0.4s;
+  transition: box-shadow 0.4s,border-radius 0.4s,border 0.4s;
+  animation: float 3s ease-in-out infinite;
 } 
 .profile img:hover {
   box-shadow: 0 0 40px red;
-  border-radius: 25%;
+  border: 3px solid #ff0000;
+  border-radius: 30%;
   transform: scale(1.05);
+}
+.profile img::before{
+  box-shadow: 0 0 40px red;
 }
 /*----------Use text-box------------------*/
  @keyframes Fade { 
@@ -225,6 +239,107 @@ footer {
   /* position: fixed; */
 }
 .img_maime{
-  width: 10%;
+  width: 5%;
   height: 10%;
 }
+/* ------------ dropdown ------------- */
+.User-profile{
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+}
+.dropdown {
+    position: absolute;
+    top: 70px;
+    right: 5px;
+    width: 260px;
+    background: #1f1f1f;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: none;
+    padding: 10px 5px;
+    z-index: 999;
+}
+
+.dropdown-header {
+    padding: 5px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.dropdown-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdown-item:hover {
+    color:#48FF00;
+}
+.logout{
+  border-radius: 12px;
+  padding: 5px 130px 10px 20px;
+  cursor: pointer;
+}
+.no-copy {
+    user-select: none;
+}
+
+.Bg-castle{
+  background-image: url("Before_in.png");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container{
+  max-width: 900px;
+  text-align: center;
+  background: rgba(255,255,255,0.5) ;
+  color: #333;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  backdrop-filter: blur(10px);
+  /* ซ่อนก่อน */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+/* ตอน scroll ถึง */
+.container.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+.container h1{
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.container p{
+  color: #666;
+  font-size: 1rem;
+}
+.preorder-btn{
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.preorder-btn::after{
+  background-color: #000;
+}
+.preorder-btn:hover{
+  color: rgb(167, 167, 167);
+  transform: scale(1.05);
+}
+
