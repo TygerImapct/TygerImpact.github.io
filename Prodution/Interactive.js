@@ -4,3 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   clone.style.animationDirection = "reverse";
   document.querySelector(".slider").appendChild(clone);
 });
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});

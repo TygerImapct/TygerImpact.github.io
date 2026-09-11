@@ -29,3 +29,16 @@ function type() {
   }
 }
 type();
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".container");
+hiddenElements.forEach(el => observer.observe(el));
