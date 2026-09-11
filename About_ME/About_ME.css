@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(to top right ,#161515,#e22f2f) fixed no-repeat;
+  /* color: rgb(239, 220, 220); */
+  overflow-x: hidden;
+  height: 100%;
+  font-family: kanit ;
+  color: #fbf7f7;
+  /* font-weight: 350; */
+}
+header{
+  margin-top: 80px;
+  padding: 0px 10%;
+  animation: Fade 2.1s ease;
+}
+.logo-bg{
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  text-align: center;
+  z-index: -1;
+  animation: Fade2 1.5s ease;
+}
+@keyframes Fade { 
+  0% { 
+    opacity: 0 ;
+    transform: translateY(40%);
+  }
+  50%  
+  { 
+    opacity: 1;
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0%);
+  }
+    }
+
+@keyframes Fade2 { 
+  0% { 
+    opacity: 0 ;
+    transform: translateY(-100%);
+  }
+  50%  
+  { 
+    opacity: 1;
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0%);
+  }
+    }
+/* ---------- Navbar ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #000000;
+}
+
+nav .logo {
+  font-size: 24px;
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+nav .logo span {
+  color: red;
+}
+.logo:hover {
+  color: #ff0000;
+}
+.logo span:hover {
+  color: #fff;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #bbb;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+/* -------------------------------------------------------------- */
+/* --------- ตัวแปรสี / พื้นฐาน --------- */
+:root{
+  --bg: #fbf7f7;        /* สีพื้นหลังหน้า */
+  --card: #732828;      /* สีพื้นของการ์ด/บล็อก */
+  --muted: #6b7280;     /* สีตัวอักษรรอง */
+  --accent: #2b6cb0;    /* สีเน้น (ถ้าต้องการ) */
+  --shadow: rgba(6, 6, 6, 0.651);
+  --radius: 18px;       /* ความโค้งของมุมการ์ด */
+  --container-max: 1100px;
+  --gutter: 18px;
+}
+
+/* --------- คอนเทนเนอร์กลางของหน้า --------- */
+.page{
+  max-width: var(--container-max);
+  margin: 28px auto;
+  padding: 20px;
+}
+
+.hero{
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+
+/* --------- แบนเนอร์แถวกว้างกลางหน้า --------- */
+.banner{
+  margin-top: 18px;
+  height: 430px;
+  background: var(--card);
+  border-radius: 22px;
+  box-shadow: 0 6px 18px var(--shadow);
+  font-weight: 600;
+}
+.banner .color{
+  padding-top: 20px;
+}
+.banner p{
+  text-align: left;
+  margin: 0 50px;
+  text-shadow: 0 0 10px black;
+}
+.banner h2{
+  text-shadow: 0 0 10px black;
+}
+.banner span{
+  color: red;
+  text-shadow: 0 0 10px black;
+}
+/* --------- กริด 3 คอลัมน์ (บล็อกกลาง) --------- */
+.blocks{
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gutter);
+}
+
+/* การ์ดทั่วไปที่ใช้ในกริด */
+.card{
+  background: var(--card);
+  min-height: 160px;
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+.card p{
+  text-align: left;
+}
+
+/* --------- แถวล่าง 2 คอลัมน์ (กล่องใหญ่) --------- */
+.bottom{
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gutter);
+}
+
+.bigcard{
+  min-height: 180px;
+  border-radius: var(--radius);
+  padding: 18px;
+  background: var(--card);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.bigcard h3{ 
+  margin-top:0; 
+}
+.bigcard p{
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000000;
+  font-size: 0.9rem;
+  color: #ffffff;
+  /* position: fixed; */
+}
+.blackcolor{
+  color: #000000;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.color{
+  color: #000000;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.img_maime{
+  width: 20%;
+  height: 30%;
+}

@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  font-family: Poppins,kanit;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+html, body {
+  height: 100%;
+  font-family: "Kanit";
+}
+/* ---------- Navbar ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #000000;
+}
+nav .logo {
+  font-size: 24px;
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+nav .logo span {
+  color: red;
+}
+.logo:hover {
+  color: #ff0000;
+}
+.logo span:hover {
+  color: #fff;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #bbb;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url('img_HL_FN2.png') ; 
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  transition: background-image 0.7s ease-in-out;
+}
+.container  {
+  background:rgba(0, 0, 0, 0.2);
+  display: flex;
+  position: absolute;
+  top: 20%;
+  left:33%;
+  /* transform: translate(-50%, -50%); */
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 10px rgba(0, 0, 0,0.2);
+  padding: 40px;
+  border: 2px solid rgba(255, 250, 255, 0.2);
+  border-radius: 45px;
+  width: 80%;
+  max-width: 475px;
+  animation: Fade2 0.9s ease-in-out ;
+}
+.Social-icon {
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  width: 100%;
+}
+.Social-item {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+.Social-item a{
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  width: 400px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.5s ease;
+}
+.Social-item:hover{
+  
+  color: #ff9c9c;
+  /* transform: scale(1.05); */
+}
+.Social-item a:hover {
+  color: #ff9c9c;
+  transform: scale(1.25);
+}
+.style_icon{
+  text-align: left;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  width: 45px;
+  padding: 5px;
+} 
+
+.fa-discord::before{
+    position: relative;
+    right: 2px; bottom: 2px;
+    font-size: 28px;
+}
+.side-slider{
+  color: #fff;
+  text-align: center;
+
+ /* background-color: #fff; */
+}
+/* ---------- Toggle Switch ---------- */
+.switch {
+  position: relative;
+  display: flex;
+  width: 60px;
+  height: 34px;
+  margin-top: 20px;
+  left: 325px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to left ,black,#a0201c);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px; width: 26px;
+  left: 4px; bottom: 4px;
+  background-color: #ffa200;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background: linear-gradient(to right ,black,#a0201c);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: #04052e;
+}
+/*-----------------class name active Java---------- */
+.icon-Light {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+.icon-Light a{
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  width: 400px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.5s ease;
+}
+.icon-Light:hover{
+  color: #ffced6;
+  transform: scale(1.05);
+}
+.icon-Light a:hover{
+  border: 1px solid #ffced6;
+  border-radius: 20px;
+  color: #ffced6;
+}
+.icon-Dark {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+.icon-Dark a{
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  width: 400px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.5s ease;
+}
+.icon-Dark:hover{
+  color: #04052e;
+  transform: scale(1.05);
+}
+.icon-Dark a:hover{
+  border: 1px solid #04052e;
+  border-radius: 20px;
+  color: #04052e;
+}
+@keyframes Fade2 {
+  0% { 
+    opacity: 0 ;
+    transform: translateY(5%);
+  }
+  50%  
+  { 
+    opacity: 0.5;
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes Fade {
+  0% { 
+    opacity: 0 ;
+  }
+  50%  
+  { 
+    opacity: 0.5;
+  }
+  100% { 
+    opacity: 1;
+  }
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background:linear-gradient(to bottom right ,#a0201c,#ffffff) fixed no-repeat;
+  font-size: 0.9rem;
+  /* position: fixed; */
+}
+.img_maime{
+  width: 10%;
+  height: 10%;
+}
