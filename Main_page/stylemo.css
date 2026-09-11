@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom right ,black,#a0201c) fixed no-repeat;
+  color: white;
+  font-family: "Prompt", sans-serif;
+  overflow-x: hidden;
+  font-family: kanit ;
+  /* font-weight: 350; */
+}
+.logo-bg{
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  z-index: -1;
+  animation: Fade2 0.7s ease;
+}
+/* ---------- Navbar ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: transparent;
+}
+
+nav .logo {
+  font-size: 24px;
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+nav .logo span {
+  color: red;
+}
+.logo:hover {
+  color: #ff0000;
+}
+.logo span:hover {
+  color: #fff;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #bbb;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90vh;
+  padding: 0 10%;
+}
+.text-box {
+  max-width: 575px;
+  cursor: default;
+  animation: Fade 0.7s ease;
+}
+
+.text-box .name {
+  color: red;
+  font-weight: 600;
+}
+
+.text-box h1 {
+  font-size: 2rem;
+  margin: 15px 0;
+}
+
+.desc {
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  position: relative;
+  /* border: 2px solid red; */
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  z-index: 0;
+}
+
+.btn.primary {
+  background: red;
+  color: #fff;
+}
+.btn:hover::before {
+  opacity: 1;
+}
+.btn:hover {
+  background: red;
+  color: #000;
+}
+.btn::after{
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #c30e0e;
+  border-radius: 25px;
+}
+.btn::before{
+  content: "";
+  background:linear-gradient(
+    45deg,
+    #FF0000,#FF7300,#FFFB00,#48FF00,
+    #00FFD5,#002BFF,#FF00C8,#FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 30px;
+    opacity: 0;
+}
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+.btn:active:after{
+  background: transparent;
+}
+/* ---------- Profile Image ---------- */
+.profile {
+  position: relative;
+  animation: slideIn 0.7s ease;
+}
+
+.profile img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 3px solid red;
+  box-shadow: 0 0 20px red;
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
+  transition: box-shadow 0.4s,border-radius 0.4s;
+} 
+.profile img:hover {
+  box-shadow: 0 0 40px red;
+  border-radius: 25%;
+  transform: scale(1.05);
+}
+/*----------Use text-box------------------*/
+ @keyframes Fade { 
+  0% { 
+    opacity: 0 ;
+    transform: translateY(100%);
+  }
+  50%  
+  { 
+    opacity: 0.5;
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0%);
+  }
+    }
+/* ---------Use Profile ---------*/
+@keyframes slideIn {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(0); }
+    }
+/* ---------img Profile ---------*/
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+/* ----------- Logo_BG ------------*/
+@keyframes Fade2 { 
+  0% { 
+    opacity: 0 ;
+    transform: translateY(-100%);
+  }
+  50%  
+  { 
+    opacity: 1;
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0%);
+  }
+    }
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000000;
+  font-size: 0.9rem;
+  /* position: fixed; */
+}
+.img_maime{
+  width: 10%;
+  height: 10%;
+}
