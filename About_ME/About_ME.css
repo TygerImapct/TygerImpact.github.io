@@ -214,8 +214,12 @@ footer {
 }
 
 .img_maime{
-  width: 5%;
+  width: 5.5%;
   height: 10%;
+}
+.img_lilax{
+  width: 4%;
+  height: 4%;
 }
 .no-copy {
     user-select: none;
