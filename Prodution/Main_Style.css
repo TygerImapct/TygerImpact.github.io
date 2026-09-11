@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to bottom right ,#a0201c,#ffffff) fixed no-repeat;
+  color: white;
+  overflow-x: hidden;
+  font-family: kanit ;
+  /* font-weight: 350; */
+}
+.logo-bg{
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  text-align: center;
+  z-index: -1;
+  animation: Fade2 1.5s ease;
+}
+@keyframes Fade2 { 
+  0% { 
+    opacity: 0 ;
+    transform: translateY(-100%);
+  }
+  50%  
+  { 
+    opacity: 1;
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0%);
+  }
+    }
+/* ---------- Navbar ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #000000;
+}
+
+nav .logo {
+  font-size: 24px;
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+nav .logo span {
+  color: red;
+}
+.logo:hover {
+  color: #ff0000;
+}
+.logo span:hover {
+  color: #fff;
+}
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #bbb;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: red;
+}
+/* ส่วนหัว */
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  text-shadow: 0 0 10px #000000;
+}
+
+/* 🔹 GALERIA 🔹 */
+.gallery {
+  margin-top: 50px;
+  overflow: hidden;
+  animation: Fade 1.5s ease;
+}
+
+.slider {
+  width: 100%;
+  height: 540px; 
+  position: relative;
+  animation: Fade 1.5s ease;
+}
+
+.slide-track {
+  display: flex;
+  /* width: calc(250px * 14); */
+  animation: scroll 25s linear infinite;
+}
+
+
+.slide-track img {
+  width: 420px;
+  height: 250px;
+  margin: 10px 10px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* .slide-track img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff0040;
+} */
+
+/* แอนิเมชันเลื่อนสวนกัน */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /*ถ้าจอเรา -131%*/
+}
+
+@keyframes Fade { 
+  0% { 
+    opacity: 0 ;
+    transform: translateY(5%);
+  }
+  50%  
+  { 
+    opacity: 1;
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0%);
+  }
+    }
+    
+.personal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  text-shadow: 0 0 10px #000000;
+}
+
+/* 🔹 PERSONAL 🔹 */
+.personal {
+  margin-top: 80px;
+  padding: 40px 10%;
+  animation: Fade 1.5s ease;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.card {
+  background:transparent;
+  width: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card > div.images {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #940303, 0 0 40px #7a0101;
+}
+
+.card h3 {
+  margin: 10px 15px 0 15px;
+  color: #dd0a0a;
+  text-shadow: 2px 4px 8px #333;
+  font-size: 1.4rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  padding: 10px;
+  color: #222;
+}
+
+.border{
+  height: 100%;
+  background: rgb(0, 0, 0,0.2);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+
+.video-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  text-shadow: 0 0 10px #000000;
+}
+
+.video-container {
+  margin: 20px 0 20px 0;
+  }
+
+.video-layout {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+  .video-entity{
+  width: 560px;
+  height: 315px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000000;
+  font-size: 0.9rem;
+  /* position: fixed; */
+}
+.img_maime{
+  width: 10%;
+  height: 10%;
+}
