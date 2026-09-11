@@ -19,11 +19,15 @@ header{
   padding: 0px 10%;
   animation: Fade 2.1s ease;
 }
+.clogo{
+  display: flex ;
+  justify-content: center;
+  
+}
 .logo-bg{
   position: absolute;
-  top: 50%;
-  left: 28%;
-  text-align: center;
+  /* top: 50%;
+  left: 28%; */
   z-index: -1;
   animation: Fade2 1.5s ease;
 }
@@ -210,6 +214,9 @@ footer {
 }
 
 .img_maime{
-  width: 20%;
-  height: 30%;
+  width: 5%;
+  height: 10%;
+}
+.no-copy {
+    user-select: none;
 }
