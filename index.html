@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Login</title>
+    <link rel="stylesheet" href="First_style.css">
+    
+</head>
+<body >
+  <div id="hero" class="hero">
+   <div class="container" id="Main-Login">
+            <h1>Quiz Login</h1>
+            <p>ขื่อ YouTube ของคุณ</p>
+            <input type="text" id="name-youtube" placeholder="Your youtube name..."><br>
+            <button onclick="GotoQuiz('Eh_HL.jpg')"> Go to Quiz!</button>
+            <div id="Show-display" class="Show-box">
+                <h2 id="panel"></h2>
+            </div>
+    </div>
+    <div class="quiz-container hidden" id="Quiz-Con">
+    <h1><span id="After-Yourname">------</span></h1>
+
+    <div id="quiz">
+      <h2 id="question" class="question"></h2>
+      <div id="options" class="options"></div>
+    </div>
+
+    <div id="result" class="result hidden ">
+      <h2>สรุปผลคะแนน</h2>
+      <p id="score"></p>
+      <a href="Main_page/indexmo.html"><button id="Congrad" class="Congrad btn">หน้าแรก</button></a>
+      <a href="index.html"><button id="Retry" class="Retry btn">ไว้มาลองใหม่นะ!</button></a>
+    </div>
+  </div>
+  </div>
+ <footer>
+    <p>© 2025 Hanami Lay CH.| All Rights Reserved</p>
+  </footer> 
+    <script src="Quiz_script.js"></script>
+</body>
+</html>
