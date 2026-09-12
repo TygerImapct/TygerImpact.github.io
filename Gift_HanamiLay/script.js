@@ -64,7 +64,7 @@ const typeObserver=new IntersectionObserver(entries=>{
 ขอให้สิ่งที่หวังไว้ค่อย ๆ กลายเป็นจริง
 และไม่ว่าจะเจอเรื่องอะไร ก็ขอให้มีรอยยิ้มอยู่เสมอ
 
-สุขสันต์วันเกิดครับ จากพ่อบ้าน Tyger 🎂✨`,28),1300);
+สุขสันต์วันเกิดและครบรอบ 5 ปี ด้วยนะครับ จากพ่อบ้าน Tyger 🎂✨`,28),1300);
   }
 },{threshold:.35});
 typeObserver.observe(finalSection);
