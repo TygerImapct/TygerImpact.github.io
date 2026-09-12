@@ -1,12 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
+</html><!DOCTYPE html>
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gift To Hanmami Lay</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>Happy Birthday ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <H1>Happy Brithday</H1>
+  <nav>
+    <a href="" class="logo no-copy"><h2 class="logo">Hanami<span>Lay</span></h2></a>
+    <ul>
+      <li><a href="../Main_page/indexmo.html">หน้าแรก</a></li>
+      <li><a href="../Contact_Me/index_about.html">ช่องทางการติดตามฉัน</a></li>
+      <li><a href="../About_ME/About__me.html">เกี่ยวกับฉัน</a></li>
+    </ul>
+  </nav>
+  <div id="stars"></div>
+  <div class="cursor-glow"></div>
+
+  <button class="music-btn" id="musicBtn" aria-label="เปิดหรือปิดเพลง">♫</button>
+  <audio id="bgMusic" loop>
+    <!-- ใส่ไฟล์เพลงของคุณเป็น music.mp3 ไว้ในโฟลเดอร์เดียวกับ index.html -->
+    <source src="HappyBirthdayRetro.mp3" type="audio/mpeg">
+  </audio>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">A LITTLE SURPRISE FOR YOU</p>
+        <h1>วันนี้มีบางอย่าง<br><span>พิเศษกว่าทุกวัน</span></h1>
+        <p class="hero-sub">พร้อมเปิดเซอร์ไพรส์หรือยัง?</p>
+        <button class="primary-btn" id="startBtn">เปิดเซอร์ไพรส์ ✨</button>
+      </div>
+      <div class="scroll-hint">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <!-- BIRTHDAY -->
+    <section class="birthday section-hidden" id="birthday">
+      <div class="section-label">01 / THE SPECIAL DAY</div>
+      <h2>Happy Birthday</h2>
+      <p class="section-intro">ขอให้วันนี้เต็มไปด้วยรอยยิ้มและความสุข 🎂</p>
+
+      <div class="cake-area">
+        <div class="cake-glow"></div>
+        <div class="cake">
+          <div class="candle candle-1"><i></i></div>
+          <div class="candle candle-2"><i></i></div>
+          <div class="candle candle-3"><i></i></div>
+          <div class="icing"></div>
+          <div class="cake-top"></div>
+          <div class="cake-body"></div>
+          <div class="cake-bottom"></div>
+        </div>
+      </div>
+
+      <button class="secondary-btn" id="blowBtn">🕯️ เป่าเทียน</button>
+      <p class="tiny-note" id="candleNote">ลองกดปุ่มดูสิ...</p>
+    </section>
+
+    <!-- GIFT -->
+    <section class="gift-section section-hidden" id="gift">
+      <div class="section-label">02 / SOMETHING FOR YOU</div>
+      <h2>มีของขวัญให้คุณหนู 🎁</h2>
+      <p class="section-intro">กดที่กล่องเพื่อเปิดดู</p>
+
+      <button class="gift-box" id="giftBtn" aria-label="เปิดกล่องของขวัญ">
+        <div class="lid"></div>
+        <div class="box"></div>
+        <div class="ribbon-v"></div>
+        <div class="ribbon-h"></div>
+        <div class="gift-sparkles">✦</div>
+      </button>
+
+      <div class="gift-message" id="giftMessage">
+        <div class="message-card">
+          <span>💌</span>
+          <h3>ข้อความพิเศษ</h3>
+          <p>ขอให้ทุกสิ่งที่ตั้งใจไว้ ค่อย ๆ กลายเป็นจริง<br>
+          และมีเรื่องดี ๆ เข้ามาในชีวิตเยอะ ๆ ครับ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section class="memories section-hidden" id="memories">
+      <div class="section-label">03 / OUR MEMORIES</div>
+      <h2>ช่วงเวลาที่น่าจดจำ</h2>
+      <p class="section-intro">รูปความทรงจำ</p>
+
+      <div class="gallery">
+        <div class="photo-card tilt-left">
+          <img src="Capture_1.png" alt="Memory">
+          <p>ช่วงเวลาที่ดี</p>
+        </div>
+        <div class="photo-card featured">
+          <img src="Boo.jpg" alt="Memory">
+          <p>ความทรงจำที่อยากเก็บไว้</p>
+        </div>
+        <div class="photo-card featured">
+          <img src="30KHL.jpg" alt="Memory 4">
+          <p>อีกหนึ่งความทรงจำ</p>
+        </div>
+        <div class="photo-card tilt-right">
+          <img src="Capture_2.png" alt="Memory">
+          <p>รอยยิ้มในวันนั้น</p>
+        </div>
+        <div class="photo-card large-photo">
+          <img src="duo2.png" alt="Memory 5">
+          <p>ความทรงจำพิเศษ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL MESSAGE -->
+    <section class="final-message section-hidden" id="final">
+      <div class="stars-big">✦</div>
+      <div class="section-label">04 / FROM THE HEART</div>
+      <h2 id="typingTitle"></h2>
+      <p class="typing-text" id="typingText"></p>
+      <div class="signature">Stay With You , <span>♡</span></div>
+      <button class="primary-btn" id="fireworkBtn">ส่งความสุขให้แด่คุณหนูผู้น่ารัก 🎆</button>
+    </section>
+  </main>
+
+  <div class="confetti-container" id="confetti"></div>
+  <div class="toast" id="toast">Happy Birthday! 🎂✨</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
