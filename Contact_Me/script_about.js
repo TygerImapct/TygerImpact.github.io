@@ -30,3 +30,6 @@ toggle.addEventListener('change', () => {
   getstatus.textContent = showtxt;
 
 });
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+});

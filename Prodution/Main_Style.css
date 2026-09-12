@@ -90,18 +90,22 @@ nav ul li a:hover {
 
 .slider {
   width: 100%;
-  height: 540px; 
+  height: 600px; 
   position: relative;
   animation: Fade 1.5s ease;
 }
 
 .slide-track {
   display: flex;
-  /* width: calc(250px * 14); */
-  animation: scroll 25s linear infinite;
+  width: max-content;
+  gap: 0;
 }
-
-
+.row-left {
+  animation: scroll-left 35s linear infinite;
+}
+.row-right {
+  animation: scroll-right 35s linear infinite;
+}
 .slide-track img {
   width: 420px;
   height: 250px;
@@ -110,16 +114,40 @@ nav ul li a:hover {
   object-fit: cover;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
+.row-left {
+  margin-bottom: 30px;
+}
 
+.row-right {
+  margin-top: 30px;
+}
 /* .slide-track img:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px #ff0040;
 } */
 
 /* แอนิเมชันเลื่อนสวนกัน */
-@keyframes scroll {
+/* @keyframes scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /*ถ้าจอเรา -131%*/
+  100% { transform: translateX(-100%); } ถ้าจอเรา -131%
+} */
+ @keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-48%);
+  }
+}
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-45%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes Fade { 
@@ -186,7 +214,7 @@ nav ul li a:hover {
 .card h3 {
   margin: 10px 15px 0 15px;
   color: #dd0a0a;
-  text-shadow: 2px 4px 8px #333;
+  text-shadow: 0px 0px 4px #fcfafa;
   font-size: 1.4rem;
 }
 
