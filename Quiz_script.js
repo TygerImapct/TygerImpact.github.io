@@ -77,7 +77,7 @@ const questions = [
   },
   {
     question: "6. ท่านแม่ของ Hanami Lay มีชื่อว่าอะไร",
-    options: ["Hanami Chocolate", "Hanami Guligo", "Hanami Oreo", "Hanami Kitkat"],
+    options: ["Hanami Chocolate", "Hanami Gulico", "Hanami Oreo", "Hanami Kitkat"],
     answer: "Hanami Guligo"
   }
 ];
